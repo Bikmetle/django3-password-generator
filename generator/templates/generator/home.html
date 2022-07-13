@@ -1,0 +1,24 @@
+<style media="screen">
+  h1{text-align:center;}
+  form{text-align:center;}
+</style>
+<br>
+<a href="{% url 'about' %}">About</a>
+<br>
+<h1>Password Generator</h1>
+<br>
+<form action="{% url 'password' %}">
+  <select name="length">
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select> Length
+  <br>
+  <input type="checkbox" name="uppercase"> UpperCase
+  <br>
+  <input type="checkbox" name="numbers"> Numbers
+  <br>
+  <input type="checkbox" name="special"> Special Characters
+  <br>
+  <input type="submit" value="Generate">
+</form>
